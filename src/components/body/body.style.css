@@ -1,0 +1,12 @@
+.container-body {
+  display: flex;
+  color: var(--main-colors-text);
+}
+
+.left-side {
+  display: flex;
+  justify-content: space-around;
+  min-height: 100%;
+  width: 80%;
+  border-right: 1px solid var(--main-colors-lines);
+}
