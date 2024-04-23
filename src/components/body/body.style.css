@@ -1,6 +1,7 @@
 .container-body {
   display: flex;
   color: var(--main-colors-text);
+  padding: 10px 15px;
 }
 
 .left-side {
