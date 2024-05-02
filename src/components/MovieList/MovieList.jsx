@@ -3,20 +3,20 @@ import getRandomMovies from '../services/Movie.service.js';
 import { useEffect, useState } from 'react';
 
 export default function () {
-  const [movies, setMovies] = useState(null);
+  const [movies, setMovies] = useState([]);
   // TODO: check how do data fetching from the company correctly
-  // TODO: разаобраться с кодом ниже
   useEffect(() => {
     const fetchData = async () => {
       const response = await getRandomMovies();
       setMovies(response.data.movies);
     };
+    fetchData();
   }, []);
 
   return (
     <div className="container-tile">
-      {movies.map((item) => (
-        <MovieTile data={item}></MovieTile>
+      {movies.map((item, i) => (
+        <MovieTile key={i} data={item}></MovieTile>
       ))}
     </div>
   );
